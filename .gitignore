@@ -1,0 +1,165 @@
+# Confidence-Aware OCR Project .gitignore
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+ocr_env/
+
+# IDE / Editors
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+
+# Operating System
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+
+# Project Specific
+
+# Large dataset files (SROIE2019)
+data/raw/SROIE2019/train/img/*.jpg
+data/raw/SROIE2019/train/box/*.txt
+data/raw/SROIE2019/train/entities/*.txt
+data/raw/SROIE2019/test/img/*.jpg
+data/raw/SROIE2019/test/box/*.txt
+data/raw/SROIE2019/test/entities/*.txt
+
+# Keep directory structure but ignore contents
+data/raw/SROIE2019/train/img/.gitkeep
+data/raw/SROIE2019/train/box/.gitkeep
+data/raw/SROIE2019/train/entities/.gitkeep
+data/raw/SROIE2019/test/img/.gitkeep
+data/raw/SROIE2019/test/box/.gitkeep
+data/raw/SROIE2019/test/entities/.gitkeep
+
+# Processed data and results
+data/processed/*
+data/results/*
+!data/results/.gitkeep
+
+# Temporary files
+temp_checklist.xlsx
+temp_checklist.pdf
+*.tmp
+
+# Learning/test scripts (optional - uncomment if you want to exclude)
+# step*.py
+# _learning_scripts/
+
+# Logs
+*.log
+
+# Streamlit cache
+.streamlit/
+
+
+# Documents & Reports
+
+# Keep the report but ignore drafts
+*_draft.md
+*_draft.pdf
+
+
+# Archives & Compressed Files
+
+*.zip
+*.tar.gz
+*.rar
+
+# Exception: Keep sample data if you have small examples
+!sample_receipts/*.jpg
+
+# Credentials & Secrets
+
+.env
+.env.local
+secrets.toml
+*.key
+*.pem
+
+
+# Miscellaneous
+*.bak
+*.swp
+*.swo
+*~
