@@ -4,7 +4,6 @@
 **Project Type:** Applied Machine Learning / Document AI  
 **Dataset:** SROIE 2019 (Real World Scanned Receipts)  
 
----
 
 ## 1. Problem Overview
 
@@ -23,7 +22,7 @@ In business critical domains (finance, compliance, healthcare), neither approach
 **Key Insight:**  
 Accuracy without uncertainty is risky. A practical OCR system must explicitly indicate what can be trusted and what requires human review.
 
----
+
 
 ## 2. Why Receipts Are a Hard OCR Problem
 
@@ -39,7 +38,7 @@ Sample receipt from the SROIE 2019 dataset and the corresponding confidence-awar
 
 ![alt text](image-1.png)
 
----
+
 
 ## 3. Proposed Solution: Confidence Aware OCR
 
@@ -55,7 +54,7 @@ Instead of asking humans to review everything or trust everything, the system:
 **Core Principle:**  
 Perfect automation is unrealistic. Intelligent collaboration is achievable.
 
----
+
 
 ## 4. System Architecture (High Level)
 
@@ -71,7 +70,7 @@ Image Architecture of the system
 
 ![alt text](image.png)
 
----
+
 
 ## 5. Dataset & Evaluation Setup
 
@@ -89,22 +88,22 @@ The system was evaluated using:
 - Confidence–error correlation  
 - Field level reliability for critical values  
 
----
+
 
 ## 6. Reproduction and Setup
 
-### 1️⃣ Python Environment
+### 1:  Python Environment
 
 Create a python environment
 
-### 2️⃣ Install Dependencies
+### 2:  Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-### 3️⃣ Tesseract OCR Installation
+### 3 :  Tesseract OCR Installation
 
 Must install separately, because it's an external dependency.
 
@@ -112,7 +111,7 @@ Must install separately, because it's an external dependency.
 - **macOS:** `brew install tesseract`
 - **Linux:** `sudo apt-get install tesseract-ocr`
 
-### 4️⃣ Dataset
+### 4:  Dataset
 
 Download the SROIE 2019 dataset from the following link:
 
@@ -128,7 +127,7 @@ After downloading:
 - The `SROIE2019` folder should contain only the `train` and `test` folders.
 - Place the `SROIE2019` folder inside the `raw` directory as shown below:
 
-### 5️⃣ Running the Project
+### 5: Running the Project
 
 **Streamlit UI:**
 ```bash
@@ -145,9 +144,9 @@ python main.py
 - CSV / JSON summaries
 - Word exports
 
----
 
-## 7. Project Structure
+
+## 6. Project Structure
 
 ```
 confidence-aware-ocr/
@@ -175,9 +174,9 @@ confidence-aware-ocr/
 └── README.md                   # This file
 ```
 
----
 
-## 8. Key Results
+
+## 7. Key Results
 
 ### Confidence Predicts Reliability
 
@@ -193,17 +192,16 @@ This validates the core hypothesis:
 
 **OCR confidence scores provide a strong, actionable signal for selective human review.**
 
----
 
-## 9. Limitations
+
+## 8. Limitations
 
 - Confidence scores are not calibrated probabilities
 - English language focus (multilingual extension possible)
 - Streamlit not intended for enterprise scale throughput
 
----
 
-## 10. Conclusion
+## 9. Conclusion
 
 The Confidence Aware OCR Document Reader demonstrates that the real challenge in document AI is not extraction, but trust.
 
